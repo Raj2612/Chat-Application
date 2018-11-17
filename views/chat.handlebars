@@ -1,0 +1,31 @@
+{{#section 'head'}}
+	<link rel='stylesheet' type='text/css' href='styles/chat.css'>
+	<script src='/behaviour/submit.js'></script>
+{{/section}}
+<div class='wrapper'>
+	{{> menubar}}
+	<div class='chatContainer'>
+		<div class='chatHeader'>
+			<h3>SlackChat</h3>
+		</div>
+		<div class='chatMessages' id='messageContainer'>
+			{{#each messages}}
+				<div class="messages">
+					{{username}} ----- {{message}} ----- on {{timestamp}}
+				</div>
+			{{/each}}
+
+		</div>
+		<div class='chatBottom'>
+			<form action='/chat' method='POST'>
+				{{#if canPost}}
+					<input type='text' name='message' id='messageField' placeholder='Type your message' maxlength="140"/>
+					<input type='submit' name='submit' id='submitMessage' value='Send'/>
+				{{else}}
+					<input type='text' name='message' id='messageField' placeholder='You can&#39;t post' disabled/>
+					<input type='submit' name='submit' id='submitMessage' value='Send' disabled/>
+				{{/if}}
+			</form>
+		</div>
+	</div>
+</div>

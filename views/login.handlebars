@@ -1,0 +1,15 @@
+{{#section 'head'}}
+<link rel="stylesheet" type="text/css" href="/styles/login.css">
+{{/section}}
+
+<div class="loginbox">
+	<img src="/pics/avatar.jpg" class="avatar">
+	<h1>Login Here</h1>
+	<form method="POST" action='/loginUser'> 
+		<p>Username</p>
+		<Input type="text" name="username" placeholder="Enter username" value={{username}}>
+		<p>Password</p>
+		<input type="password" name="password" placeholder="Enter Password" value={{pass}}>
+		<input type="submit" name="" value="Login">
+	</form>
+</div>

@@ -1,0 +1,193 @@
+*{
+	font-family: 'Open Sans';
+	box-sizing: border-box;
+}
+ html, body {
+            height: 100%;
+            margin: 0;
+}
+body{
+	margin: 0;
+	padding: 0;
+	background: url(/pics/loginBackground.jpg);
+	background-size: cover;
+}
+.wrapper{
+	width:100%;
+	height:100%
+}
+ul {
+    	list-style-type: none;
+    	margin: 0;
+    	padding: 0;
+    	width: 20%;
+   	background:transparent;
+   	position: fixed;
+   	height: 100%;
+   	overflow: auto;
+	border: 1px solid white;
+}
+
+li a {
+    	display: block;
+    	color: white;
+    	padding: 8px 16px;
+    	text-decoration: none;
+	border: 1px solid white;
+	
+}
+
+li a.active {
+    	background-color: #990000;
+    	color: white;
+}
+
+li a:hover:not(.active) {
+    	background-color: #990000;
+    	color: white;
+}
+
+.chatContainer{
+	width: 80%;
+	height: 100%;
+	position: absolute;
+	left: 20%;
+	border: 2px solid #ddd;
+	
+}
+.chatContainer > .chatHeader{
+	width: 100%;
+	background: white;
+	padding: 5px;
+	background-color: #990000;
+	border-bottom: 3px solid #ddd;
+}
+.chatContainer > .chatHeader h3{
+	text-align: center;
+	margin:0;
+	padding:0;
+	font-weight:500;
+	color: white;
+	
+}
+.chatContainer > .chatMessages{
+	height: calc(100% - 80px);
+	background: transparent;
+	border-bottom: 1px solid #ddd;
+	overflow-y: scroll;
+}
+.chatContainer > .chatBottom form input[type='submit']{
+	padding: 6px;
+	text-align: center;
+	border: 2px solid white;
+	cursor: pointer;
+	height: 38px;
+	width: 8%;
+	color: white;
+	background: transparent;
+	font-size: 16px;
+
+}
+.chatContainer > .chatBottom form input[type='text']{
+	width: 90%;
+	padding: 6px;
+	padding-left: 10px;
+	border: 2px solid #ddd;
+	border-radius: 5px;
+	margin: 5px;
+	height: 35px;
+	background: transparent;
+	color: white;
+	font-size: 16px;
+}
+.messages {
+    	border: 2px solid #dedede;
+    	background:transparent;
+    	border-radius: 5px;
+   	padding: 10px;
+    	margin: 10px 5px;
+	color: white;
+	width:80%;
+	height: 50px;
+	
+}
+.messages::after {
+    	content: "";
+    	clear: both;
+    	display: table;
+}
+.messages input[type='submit']{
+	padding: 6px;
+	text-align: center;
+	border: 2px solid white;
+	cursor: pointer;
+	height: 30px;
+	width: 8%;
+	color: white;
+	background: transparent;
+	font-size: 16px;
+	left: 70%;
+
+}
+.switch {
+  	position: relative;
+ 	display: inline-block;
+  	width: 60px;
+  	height: 34px;
+	left: 4px;
+	
+}
+
+.switch input {display:none;}
+
+.slider {
+  	position: absolute;
+  	cursor: pointer;
+  	top: 0;
+  	left: 0;
+  	right: 0;
+  	bottom: 0;
+  	background-color: transparent;
+  	-webkit-transition: .4s;
+  	transition: .4s;
+}
+
+.slider:before {
+  	position: absolute;
+  	content: "";
+  	height: 26px;
+  	width: 26px;
+  	left: 4px;
+  	bottom: 4px;
+  	background-color: #990000;
+  	-webkit-transition: .4s;
+  	transition: .4s;
+}
+
+input:checked + .slider {
+  	background-color: #ccc;
+}
+
+input:focus + .slider {
+  	box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  	-webkit-transform: translateX(26px);
+  	-ms-transform: translateX(26px);
+  	transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  	border-radius: 34px;
+	 border: 1px solid white;
+	
+}
+
+.slider.round:before {
+  	border-radius: 50%;
+}
+
+
+

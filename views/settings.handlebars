@@ -1,0 +1,30 @@
+{{#section 'head'}}
+	<link rel='stylesheet' type='text/css' href='styles/chat.css'>
+	<script src="/behaviour/settings.js"></script>
+{{/section}}
+<div class='wrapper'>
+	{{> menubar}}
+	<div class='chatContainer'>
+		<div class='chatHeader'>
+			<h3>Settings</h3>
+		</div>
+		<p style="Color:white">Post order from Newest to Oldest :<p>
+		<label class="switch" >
+			{{#if postOn}}
+  				<input type="checkbox" checked id="post">
+			{{else}}
+				<input type="checkbox" id="post">
+			{{/if}}
+  			<span class="slider round"></span>
+		</label>
+		<p style="Color:white">Remember me :<p>
+		<label class="switch" >
+			{{#if rememberOn}}
+  				<input type="checkbox" checked id="remember">
+			{{else}}
+				<input type="checkbox" id="remember">
+			{{/if}}
+  			<span class="slider round"></span>
+		</label>
+	</div>
+</div>

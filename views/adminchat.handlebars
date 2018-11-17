@@ -1,0 +1,27 @@
+{{#section 'head'}}
+	<link rel='stylesheet' type='text/css' href='styles/chat.css'>
+	<script src='/behaviour/admin.js'></script>
+{{/section}}
+<div class='wrapper'>
+	{{> adminmenubar}}
+	<div class='chatContainer'>
+		<div class='chatHeader'>
+			<h3>SlackChat</h3>
+		</div>
+		<div class='chatMessages' id='messageContainer'>
+			{{#each messages}}
+				<div class="messages">
+					{{username}} ----- {{message}} ----- on {{timestamp}}
+					<input type='submit' name={{_id}} class='deleteMessage' value='Delete'/>
+				</div>
+			{{/each}}
+
+		</div>
+		<div class='chatBottom'>
+			<form action='/chat' method='POST'>
+				<input type='text' name='message' id='messageField' placeholder='Type your message' maxlength="140"/>
+				<input type='submit' name='submit' id='submitMessage' value='Send'/>
+			</form>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,20 @@
+{{#section 'head'}}
+	<link rel='stylesheet' type='text/css' href='styles/chat.css'>
+	<script src='/behaviour/delete.js'></script>
+{{/section}}
+<div class='wrapper'>
+	{{> menubar}}
+	<div class='chatContainer'>
+		<div class='chatHeader'>
+			<h3>My Posts</h3>
+		</div>
+		<div class='chatMessages'>
+			{{#each messages}}
+				<div class="messages">
+					{{username}} --- {{message}} --- on {{timestamp}}
+					<input type='submit' name={{_id}} class='deleteMessage' value='Delete'/>
+				</div>
+			{{/each}}
+		</div>
+	</div>
+</div>
